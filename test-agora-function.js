@@ -2,7 +2,7 @@
 // Run this after deploying the function to test it
 
 const SUPABASE_URL = 'https://oqzjoygeizegfqhbpcfa.supabase.co'
-const SUPABASE_ANON_KEY = 'your-supabase-anon-key' // Replace with your actual anon key
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xempveWdlaXplZ2ZxaGJwY2ZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1OTI5MDAsImV4cCI6MjAzMTE2ODkwMH0.Ej8JgUgbEKKHhAXtKQJOuQhDUujqfbWersKJwPf6oQs' // Your actual anon key
 
 async function testAgoraTokenGeneration() {
   console.log('🧪 Testing Agora Token Generation Edge Function...\n')

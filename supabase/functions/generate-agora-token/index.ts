@@ -8,11 +8,11 @@ import { corsHeaders } from '../_shared/cors.ts'
 // Based on official Agora token generation algorithm
 
 // Global declarations for Supabase Edge Runtime
-declare const serve: (handler: (req: Request) => Response | Promise<Response>) => void
 declare const Deno: {
   env: {
     get(key: string): string | undefined
   }
+  serve: (handler: (req: Request) => Response | Promise<Response>) => void
 }
 
 // Constants and utilities
@@ -355,7 +355,7 @@ async function generateRTMToken(
 /**
  * Main handler function for the Edge Function
  */
-serve(async (req) => {
+Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
